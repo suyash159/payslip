@@ -56,7 +56,7 @@ export default function PaySlip(props) {
         Deductions: deductions,
         Attandance: attandance,
       };
-      //pdf.save(`${pdfData.Employee.Name}.pdf`);
+      pdf.save(`${pdfData.Employee.Name}.pdf`);
       toast("payslip downloaded");
       if (slipid) {
         pdfData.Employee.EmployeeIdDb = id;
