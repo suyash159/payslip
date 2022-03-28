@@ -1,0 +1,20 @@
+#paytd {
+  height: 26px;
+  border: 1px solid black;
+  padding: 7px;
+}
+#payth {
+  border: 1px solid black;
+  min-height: 24px;
+}
+
+#paytable {
+  border-collapse: collapse;
+  border-style: hidden;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+#payh1 {
+  font-weight: 500;
+}
