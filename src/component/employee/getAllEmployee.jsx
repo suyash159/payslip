@@ -29,8 +29,6 @@ export default function GetAllEmployee(props) {
 
   useEffect(() => {
     service.getRequest("employee/getall").then((data) => {
-      console.log({ data });
-
       setEmployee([...data]);
     });
   }, []);

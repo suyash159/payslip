@@ -8,7 +8,6 @@ export default function AddEmployee(props) {
   const navigate = useNavigate();
   useEffect(() => {
     if (props.authCheck == false) {
-      console.log(props.authCheck, "after refresh");
       navigate("/login");
     }
   }, []);
@@ -30,14 +29,11 @@ export default function AddEmployee(props) {
       Conveyance: data.Conveyance,
     };
     service.postRequest("employee/add", newEmployee).then((res) => {
-      console.log(res, "employee data");
       if (res.code == 11000) {
         alert("email already registered");
       }
       Salary.EmployeeId = res._id;
       service.postRequest(`salary/add`, Salary).then((res) => {
-        console.log(res, "salary");
-        console.log({ Salary });
         navigate("/home");
       });
     });

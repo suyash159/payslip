@@ -56,7 +56,7 @@ export default function PaySlip(props) {
         Deductions: deductions,
         Attandance: attandance,
       };
-      pdf.save(`${pdfData.Employee.Name}.pdf`);
+      pdf.save(`${pdfData.Employee.Name}payslip.pdf`);
       toast("payslip downloaded");
       if (slipid) {
         pdfData.Employee.EmployeeIdDb = id;
@@ -475,11 +475,11 @@ export default function PaySlip(props) {
             </div>
           </div>
         </div>
-        <ToastContainer />
       </div>
       <div className="">
-        <button onClick={printDocument}>Print slip</button>
+        <button onClick={() => printDocument()}>Print slip</button>
       </div>
+      <ToastContainer />
     </div>
   );
 }
